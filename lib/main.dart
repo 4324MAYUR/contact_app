@@ -1,6 +1,7 @@
 import 'package:contact_app/utils/routes.dart';
+import 'package:contact_app/views/contact/provider/contact_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+ import 'package:provider/provider.dart';
 
 void main()
 {
@@ -16,7 +17,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers:[
-
+        ChangeNotifierProvider.value(
+          value: HomeProvider(),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
